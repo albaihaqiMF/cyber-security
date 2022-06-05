@@ -2449,6 +2449,79 @@ function NavLink(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/Components/Navbar.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Components/Navbar.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Navbar)
+/* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function Navbar(props) {
+  var navList = [{
+    name: "Home",
+    path: route("welcome")
+  }, {
+    name: "Services",
+    path: "#"
+  }, {
+    name: "Features",
+    path: "#"
+  }, {
+    name: "Pricing",
+    path: "#"
+  }, {
+    name: "Tutorials",
+    path: "#"
+  }, {
+    name: "FAQ",
+    path: "#"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "text-white",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "container flex items-center justify-between py-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+        className: "text-2xl font-bold md:text-4xl",
+        children: ["Git", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "text-theme-1",
+          children: "Sec"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "flex items-center",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "flex-col hidden md:flex md:space-x-4 md:flex-row",
+          children: navList.map(function (value) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+              href: value.path,
+              className: "text-lg font-semibold",
+              children: value.name
+            });
+          })
+        }), props.auth.user !== null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+            href: route("dashboard"),
+            className: "px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80",
+            children: "Dashboard"
+          })
+        }) : null]
+      })]
+    })
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Components/ResponsiveNavLink.js":
 /*!******************************************************!*\
   !*** ./resources/js/Components/ResponsiveNavLink.js ***!
@@ -2575,38 +2648,42 @@ function Authenticated(_ref) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
       className: "bg-white border-b border-gray-100",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+        className: "px-4 mx-auto max-w-7xl sm:px-6 lg:px-8",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "flex justify-between h-16",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "flex",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "shrink-0 flex items-center",
+              className: "flex items-center shrink-0",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
                 href: "/",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_ApplicationLogo__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  className: "block h-9 w-auto text-gray-500"
+                  className: "block w-auto text-gray-500 h-9"
                 })
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
               className: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_NavLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                href: route('dashboard'),
-                active: route().current('dashboard'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_NavLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                href: route("welcome"),
+                active: route().current("welcome"),
+                children: "Home"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_NavLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                href: route("dashboard"),
+                active: route().current("dashboard"),
                 children: "Dashboard"
-              })
+              })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "hidden sm:flex sm:items-center sm:ml-6",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "ml-3 relative",
+              className: "relative ml-3",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_Components_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Trigger, {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
                     className: "inline-flex rounded-md",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
                       type: "button",
-                      className: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150",
+                      className: "inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none",
                       children: [auth.user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
                         className: "ml-2 -mr-0.5 h-4 w-4",
                         xmlns: "http://www.w3.org/2000/svg",
@@ -2622,7 +2699,7 @@ function Authenticated(_ref) {
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Content, {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Link, {
-                    href: route('logout'),
+                    href: route("logout"),
                     method: "post",
                     as: "button",
                     children: "Log Out"
@@ -2631,27 +2708,27 @@ function Authenticated(_ref) {
               })
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "-mr-2 flex items-center sm:hidden",
+            className: "flex items-center -mr-2 sm:hidden",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
               onClick: function onClick() {
                 return setShowingNavigationDropdown(function (previousState) {
                   return !previousState;
                 });
               },
-              className: "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
+              className: "inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
-                className: "h-6 w-6",
+                className: "w-6 h-6",
                 stroke: "currentColor",
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                  className: !showingNavigationDropdown ? 'inline-flex' : 'hidden',
+                  className: !showingNavigationDropdown ? "inline-flex" : "hidden",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
                   strokeWidth: "2",
                   d: "M4 6h16M4 12h16M4 18h16"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                  className: showingNavigationDropdown ? 'inline-flex' : 'hidden',
+                  className: showingNavigationDropdown ? "inline-flex" : "hidden",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
                   strokeWidth: "2",
@@ -2662,12 +2739,12 @@ function Authenticated(_ref) {
           })]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-        className: (showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden',
+        className: (showingNavigationDropdown ? "block" : "hidden") + " sm:hidden",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "pt-2 pb-3 space-y-1",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            href: route('dashboard'),
-            active: route().current('dashboard'),
+            href: route("dashboard"),
+            active: route().current("dashboard"),
             children: "Dashboard"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
@@ -2675,17 +2752,17 @@ function Authenticated(_ref) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "px-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "font-medium text-base text-gray-800",
+              className: "text-base font-medium text-gray-800",
               children: auth.user.name
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "font-medium text-sm text-gray-500",
+              className: "text-sm font-medium text-gray-500",
               children: auth.user.email
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "mt-3 space-y-1",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
               method: "post",
-              href: route('logout'),
+              href: route("logout"),
               as: "button",
               children: "Log Out"
             })
@@ -2695,7 +2772,7 @@ function Authenticated(_ref) {
     }), header && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("header", {
       className: "bg-white shadow",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8",
+        className: "px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
         children: header
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("main", {
@@ -2739,6 +2816,40 @@ function Guest(_ref) {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg",
+      children: children
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Layouts/Layout.js":
+/*!****************************************!*\
+  !*** ./resources/js/Layouts/Layout.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Layout)
+/* harmony export */ });
+/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/Navbar */ "./resources/js/Components/Navbar.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function Layout(_ref) {
+  var children = _ref.children,
+      auth = _ref.auth;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "bg-theme-2",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Components_Navbar__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      auth: auth
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "container",
       children: children
     })]
   });
@@ -3415,6 +3526,67 @@ function Dashboard(props) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Landingpage.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Landingpage.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Landingpage)
+/* harmony export */ });
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Assets_Images_animasi_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Assets/Images/animasi.png */ "./resources/js/Assets/Images/animasi.png");
+/* harmony import */ var _Partials_Features__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Partials/Features */ "./resources/js/Partials/Features.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+function Landingpage(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    auth: props.auth,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, {
+      title: "Welcome"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "flex flex-col w-full py-4 md:flex-row xl:py-0 md:h-[90vh]",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "flex flex-col items-start justify-center w-full space-y-4 text-white md:w-1/2 md:pr-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "font-semibold textlg md:text-2xl",
+          children: "KILLBOT FOR YOUR ENTIRE DIGITAL ECOSYSTEM"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "text-2xl font-semibold text-justify md:text-4xl",
+          children: "Protect and accelerate your websites and apps"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "w-1/2 mb-6 text-base text-justify md:text-lg",
+          children: "Magang Kerja menjembatani teman-teman mahasiswa dan pencari kerja dengan mitra perusahaan yang menanti Anda untuk menjadi bagian dari perusahaan mereka"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+          href: route("register"),
+          className: "px-4 py-3 font-semibold text-white rounded-full bg-theme-1",
+          children: "Create An Account"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "flex items-center justify-center w-full md:w-1/2",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          src: _Assets_Images_animasi_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+          alt: "Cyber Security",
+          className: "h-full md:h-auto md:w-3/4"
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Partials_Features__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Welcome.js":
 /*!***************************************!*\
   !*** ./resources/js/Pages/Welcome.js ***!
@@ -3439,7 +3611,7 @@ function Welcome(props) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, {
       title: "Welcome"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0",
+      className: "relative flex justify-center min-h-screen bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "fixed top-0 right-0 px-6 py-4 sm:block",
         children: props.auth.user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
@@ -3465,7 +3637,7 @@ function Welcome(props) {
             viewBox: "0 0 651 192",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "h-16 w-auto text-gray-700 sm:h-20",
+            className: "w-auto h-16 text-gray-700 sm:h-20",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("g", {
               clipPath: "url(#clip0)",
               fill: "#EF3B2D",
@@ -3475,7 +3647,7 @@ function Welcome(props) {
             })
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg",
+          className: "mt-8 overflow-hidden bg-white shadow dark:bg-gray-800 sm:rounded-lg",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             className: "grid grid-cols-1 md:grid-cols-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -3494,17 +3666,17 @@ function Welcome(props) {
                     d: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "ml-4 text-lg leading-7 font-semibold",
+                  className: "ml-4 text-lg font-semibold leading-7",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "https://laravel.com/docs",
-                    className: "underline text-gray-900 dark:text-white",
+                    className: "text-gray-900 underline dark:text-white",
                     children: "Documentation"
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "ml-12",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "mt-2 text-gray-600 dark:text-gray-400 text-sm",
+                  className: "mt-2 text-sm text-gray-600 dark:text-gray-400",
                   children: "Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end."
                 })
               })]
@@ -3526,17 +3698,17 @@ function Welcome(props) {
                     d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z"
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "ml-4 text-lg leading-7 font-semibold",
+                  className: "ml-4 text-lg font-semibold leading-7",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "https://laracasts.com",
-                    className: "underline text-gray-900 dark:text-white",
+                    className: "text-gray-900 underline dark:text-white",
                     children: "Laracasts"
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "ml-12",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "mt-2 text-gray-600 dark:text-gray-400 text-sm",
+                  className: "mt-2 text-sm text-gray-600 dark:text-gray-400",
                   children: "Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process."
                 })
               })]
@@ -3556,17 +3728,17 @@ function Welcome(props) {
                     d: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "ml-4 text-lg leading-7 font-semibold",
+                  className: "ml-4 text-lg font-semibold leading-7",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "https://laravel-news.com/",
-                    className: "underline text-gray-900 dark:text-white",
+                    className: "text-gray-900 underline dark:text-white",
                     children: "Laravel News"
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "ml-12",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "mt-2 text-gray-600 dark:text-gray-400 text-sm",
+                  className: "mt-2 text-sm text-gray-600 dark:text-gray-400",
                   children: "Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials."
                 })
               })]
@@ -3586,13 +3758,13 @@ function Welcome(props) {
                     d: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                  className: "ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white",
+                  className: "ml-4 text-lg font-semibold leading-7 text-gray-900 dark:text-white",
                   children: "Vibrant Ecosystem"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "ml-12",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                  className: "mt-2 text-gray-600 dark:text-gray-400 text-sm",
+                  className: "mt-2 text-sm text-gray-600 dark:text-gray-400",
                   children: ["Laravel's robust library of first-party tools and libraries, such as", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "https://forge.laravel.com",
                     className: "underline",
@@ -3641,7 +3813,7 @@ function Welcome(props) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "flex justify-center mt-4 sm:items-center sm:justify-between",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "text-center text-sm text-gray-500 sm:text-left",
+            className: "text-sm text-center text-gray-500 sm:text-left",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "flex items-center",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
@@ -3651,7 +3823,7 @@ function Welcome(props) {
                 strokeWidth: "2",
                 viewBox: "0 0 24 24",
                 stroke: "currentColor",
-                className: "-mt-px w-5 h-5 text-gray-400",
+                className: "w-5 h-5 -mt-px text-gray-400",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
                   d: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 })
@@ -3666,7 +3838,7 @@ function Welcome(props) {
                 strokeLinejoin: "round",
                 strokeWidth: "2",
                 viewBox: "0 0 24 24",
-                className: "ml-4 -mt-px w-5 h-5 text-gray-400",
+                className: "w-5 h-5 ml-4 -mt-px text-gray-400",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
                   d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 })
@@ -3677,11 +3849,75 @@ function Welcome(props) {
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0",
+            className: "ml-4 text-sm text-center text-gray-500 sm:text-right sm:ml-0",
             children: ["Laravel v", props.laravelVersion, " (PHP v", props.phpVersion, ")"]
           })]
         })]
       })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Partials/Features.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Partials/Features.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Features)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Assets_Images_Shield_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Assets/Images/Shield.png */ "./resources/js/Assets/Images/Shield.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function Features() {
+  var features = [{
+    icon: _Assets_Images_Shield_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+    title: "Cloud Security",
+    description: "Keeping your cloud secure is a constantly evolving challenge that legacy security tools are"
+  }, {
+    icon: _Assets_Images_Shield_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+    title: "Cloud Security",
+    description: "Keeping your cloud secure is a constantly evolving challenge that legacy security tools are"
+  }, {
+    icon: _Assets_Images_Shield_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+    title: "Cloud Security",
+    description: "Keeping your cloud secure is a constantly evolving challenge that legacy security tools are"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "py-4",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "w-full",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        className: "mb-4 text-2xl font-semibold text-center text-white md:text-4xl",
+        children: "Featured Service and Solutions"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "grid grid-cols-12 gap-6",
+      children: features.map(function (value) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "p-6 mx-3 space-y-3 text-center md:text-left col-span-full md:col-span-4 bg-theme-5",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: value.icon,
+            alt: value.title,
+            className: "h-8 mx-auto md:h-12 md:mx-0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            className: "text-lg font-semibold text-white",
+            children: value.title
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: "text-justify text-white md:text-left",
+            children: value.description
+          })]
+        });
+      })
     })]
   });
 }
@@ -3993,6 +4229,36 @@ var deepmerge_1 = deepmerge;
 
 module.exports = deepmerge_1;
 
+
+/***/ }),
+
+/***/ "./resources/js/Assets/Images/Shield.png":
+/*!***********************************************!*\
+  !*** ./resources/js/Assets/Images/Shield.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Shield.png?cbb58055cff6e929edda3e2a7c053a1d");
+
+/***/ }),
+
+/***/ "./resources/js/Assets/Images/animasi.png":
+/*!************************************************!*\
+  !*** ./resources/js/Assets/Images/animasi.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/animasi.png?95c5f988f5ae71db789c1db4b2b9e8f1");
 
 /***/ }),
 
@@ -56940,6 +57206,8 @@ var map = {
 	"./Auth/VerifyEmail.js": "./resources/js/Pages/Auth/VerifyEmail.js",
 	"./Dashboard": "./resources/js/Pages/Dashboard.js",
 	"./Dashboard.js": "./resources/js/Pages/Dashboard.js",
+	"./Landingpage": "./resources/js/Pages/Landingpage.js",
+	"./Landingpage.js": "./resources/js/Pages/Landingpage.js",
 	"./Welcome": "./resources/js/Pages/Welcome.js",
 	"./Welcome.js": "./resources/js/Pages/Welcome.js"
 };
