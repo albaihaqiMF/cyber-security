@@ -34,29 +34,32 @@ export default function Navbar(props) {
                 <p className="text-2xl font-bold md:text-4xl">
                     Git<span className="text-theme-1">Sec</span>
                 </p>
-                <div className="flex items-center">
-                    <div className="flex-col hidden md:flex md:space-x-4 md:flex-row">
-                        {navList.map(function (value) {
-                            return (
-                                <Link
-                                    href={value.path}
-                                    className="text-lg font-semibold"
-                                >
-                                    {value.name}
-                                </Link>
-                            );
-                        })}
-                    </div>
-                    {props.auth.user !== null ? (
-                        <div>
+                <div className="flex-col items-center hidden md:flex md:space-x-4 md:flex-row">
+                    {navList.map(function (value) {
+                        return (
                             <Link
-                                href={route("dashboard")}
-                                className="px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
+                                href={value.path}
+                                className="text-lg font-semibold"
                             >
-                                Dashboard
+                                {value.name}
                             </Link>
-                        </div>
-                    ) : null}
+                        );
+                    })}
+                    {props.auth.user !== null ? (
+                        <Link
+                            href={route("dashboard")}
+                            className="px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
+                        >
+                            Dashboard
+                        </Link>
+                    ) : (
+                        <Link
+                            href={route("login")}
+                            className="px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
+                        >
+                            Login
+                        </Link>
+                    )}
                 </div>
             </div>
         </div>
