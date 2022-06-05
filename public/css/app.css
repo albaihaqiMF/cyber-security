@@ -600,15 +600,15 @@ select {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 @media (min-width: 640px) {
 
   .container {
     max-width: 640px;
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
 @media (min-width: 768px) {
@@ -977,6 +977,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
+.bg-theme-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(104 197 93 / var(--tw-bg-opacity));
+}
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
@@ -984,10 +988,6 @@ select {
 .bg-theme-2 {
   --tw-bg-opacity: 1;
   background-color: rgb(2 19 39 / var(--tw-bg-opacity));
-}
-.bg-theme-1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(104 197 93 / var(--tw-bg-opacity));
 }
 .bg-theme-5 {
   --tw-bg-opacity: 1;
@@ -1026,6 +1026,10 @@ select {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1041,10 +1045,6 @@ select {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 .pt-8 {
   padding-top: 2rem;
