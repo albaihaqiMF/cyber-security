@@ -811,9 +811,6 @@ select {
 .w-1\/2 {
   width: 50%;
 }
-.min-w-\[30px\] {
-  min-width: 30px;
-}
 .min-w-\[42px\] {
   min-width: 42px;
 }
