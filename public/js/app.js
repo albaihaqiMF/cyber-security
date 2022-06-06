@@ -2499,19 +2499,19 @@ function Navbar(props) {
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "flex-col items-center hidden md:flex md:space-x-4 md:flex-row",
-        children: [navList.map(function (value) {
+        children: [navList.map(function (value, i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
             href: value.path,
             className: "text-lg font-semibold",
             children: value.name
-          });
+          }, i);
         }), props.auth.user !== null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: route("dashboard"),
-          className: "px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80",
+          className: "px-4 py-3 ml-4 text-lg min-w-[42px] font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80",
           children: "Dashboard"
         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: route("login"),
-          className: "px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80",
+          className: "px-4 py-3 ml-4 text-lg min-w-[42px] font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80",
           children: "Login"
         })]
       })]
@@ -3901,7 +3901,7 @@ function Features() {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "grid grid-cols-12 gap-6",
-      children: features.map(function (value) {
+      children: features.map(function (value, i) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "p-6 mx-3 space-y-3 text-center md:text-left col-span-full md:col-span-4 bg-theme-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
@@ -3915,7 +3915,7 @@ function Features() {
             className: "text-justify text-white md:text-left",
             children: value.description
           })]
-        });
+        }, i);
       })
     })]
   });

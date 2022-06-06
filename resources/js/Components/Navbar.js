@@ -35,9 +35,10 @@ export default function Navbar(props) {
                     Git<span className="text-theme-1">Sec</span>
                 </p>
                 <div className="flex-col items-center hidden md:flex md:space-x-4 md:flex-row">
-                    {navList.map(function (value) {
+                    {navList.map(function (value, i) {
                         return (
                             <Link
+                                key={i}
                                 href={value.path}
                                 className="text-lg font-semibold"
                             >
@@ -48,14 +49,14 @@ export default function Navbar(props) {
                     {props.auth.user !== null ? (
                         <Link
                             href={route("dashboard")}
-                            className="px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
+                            className="px-4 py-3 ml-4 text-lg min-w-[42px] font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
                         >
                             Dashboard
                         </Link>
                     ) : (
                         <Link
                             href={route("login")}
-                            className="px-4 py-3 ml-4 text-lg font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
+                            className="px-4 py-3 ml-4 text-lg min-w-[42px] font-semibold text-white rounded-full bg-theme-1 hover:bg-opacity-80"
                         >
                             Login
                         </Link>
